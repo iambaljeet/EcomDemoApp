@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.CartActivity">
+
+    <include
+        layout="@layout/back_toolbar_layout" />
+
+    <android.support.design.card.MaterialCardView
+        android:id="@+id/card_items_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        app:cardCornerRadius="10dp" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/cart_list_recycler_view"
+                android:layout_above="@+id/divider_view"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <View
+                android:id="@+id/divider_view"
+                android:layout_above="@+id/grand_total_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/colorGray" />
+
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/grand_total_title_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:text="@string/grand_total"
+                android:lines="1"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:padding="10dp"
+                android:textSize="16sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/grand_total_text_view"
+                android:layout_toEndOf="@+id/grand_total_title_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:lines="1"
+                android:maxLines="2"
+                android:padding="10dp"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+    </android.support.design.card.MaterialCardView>
+
+    <include
+        layout="@layout/no_items_layout" />
+
+</LinearLayout>

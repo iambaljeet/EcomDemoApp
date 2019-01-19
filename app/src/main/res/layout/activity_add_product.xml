@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fillViewport="true"
+    tools:context=".activities.AddProductActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/back_toolbar_layout" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/product_name_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_round_bg"
+                android:lines="1"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:padding="10dp"
+                android:hint="@string/product_name"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp" />
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:id="@+id/product_category_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_round_bg"
+                android:lines="1"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:padding="10dp"
+                android:entries="@array/product_categories"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp" />
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:id="@+id/currency_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_round_bg"
+                android:lines="1"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:padding="10dp"
+                android:entries="@array/product_currency"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/product_description_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_round_bg"
+                android:maxLines="5"
+                android:inputType="textMultiLine"
+                android:gravity="start"
+                android:ellipsize="end"
+                android:padding="10dp"
+                android:hint="@string/description"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/product_price_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_round_bg"
+                android:lines="1"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:padding="10dp"
+                android:hint="@string/product_price"
+                android:textSize="14sp"
+                android:inputType="number"
+                android:layout_marginTop="10dp" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/product_discount_price_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_round_bg"
+                android:lines="1"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:padding="10dp"
+                android:hint="@string/discounted_price"
+                android:inputType="number"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/add_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/add_product"
+                android:textSize="14sp"
+                android:textColor="@color/colorWhite"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/button_round_bg" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

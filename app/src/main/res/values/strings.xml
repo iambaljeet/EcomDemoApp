@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Ecom Demo App</string>
+    <string name="no_product_found">No Product(s) Found</string>
+    <string name="search">Search..</string>
+    <string name="product_name">Product Name</string>
+    <string name="description">Description</string>
+    <string name="product_price">Product Price</string>
+    <string name="discounted_price">Discounted Price</string>
+    <string name="add_product">Add Product</string>
+    <string name="add_to_cart">Add To Cart</string>
+    <string name="add_to_cart_message">Do you want to add this product to cart?</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">Ok</string>
+    <string name="remove_from_cart">Remove From Cart</string>
+    <string name="remove_from_cart_message">Do you want to remove this product from cart?</string>
+    <string name="grand_total">Grand Total:</string>
+    <string name="filter_title">Filter</string>
+    <string name="Cart">Cart</string>
+    <string name="select_price">Select Price</string>
+    <string name="selected_price">Selected Price: </string>
+    <string name="reset">Reset</string>
+    <string name="apply">Apply</string>
+
+    <string-array name="product_categories">
+        <item>--Select Category--</item>
+        <item>Fruits</item>
+        <item>Electronic</item>
+        <item>Mobiles</item>
+        <item>Kitchen</item>
+        <item>Food</item>
+    </string-array>
+
+    <string-array name="product_currency">
+        <item>--Select Currency--</item>
+        <item>₹</item>
+        <item>$</item>
+    </string-array>
+</resources>

@@ -49,11 +49,6 @@ public class CartListAdapter extends RecyclerView.Adapter<CartListAdapter.ViewHo
         int product_id = cartModelArrayList.get(itemHolder.getAdapterPosition()).getProduct_id();
 
         final ProductsModel productsModel = sqliteHelper.getProductById(product_id);
-        grand_total = grand_total + productsModel.getProduct_discounted_price();
-
-        if (context instanceof CartActivity) {
-            ((CartActivity) context).setGrandTotal(grand_total);
-        }
 
         itemHolder.productNameTextView.setText(productsModel.getProduct_name());
         itemHolder.productDescriptionTextView.setText(productsModel.getProduct_description());

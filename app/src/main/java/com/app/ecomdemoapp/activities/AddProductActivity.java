@@ -9,6 +9,7 @@ import android.support.v7.widget.AppCompatSpinner;
 import android.support.v7.widget.AppCompatTextView;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.Toast;
 
 import com.app.ecomdemoapp.MyApplication;
 import com.app.ecomdemoapp.R;
@@ -118,6 +119,9 @@ public class AddProductActivity extends AppCompatActivity implements View.OnClic
         productsModel.setProduct_discounted_price(productDiscountedPrice);
         productsModel.setProduct_price(productPrice);
         productsModel.setProduct_time(productTime);
-        sqliteHelper.addNewProduct(productsModel);
+        if (sqliteHelper.addNewProduct(productsModel) > 0) {
+            Toast.makeText(this, "Product Added Successfully", Toast.LENGTH_SHORT).show();
+            finish();
+        }
     }
 }

@@ -26,7 +26,6 @@ public class CartActivity extends AppCompatActivity implements View.OnClickListe
     private AppCompatImageButton backImageButton;
     private AppCompatImageButton moreImageButton;
     private RecyclerView cartListRecyclerView;
-    private AppCompatTextView grandTotalTextView;
     private LinearLayout noProductsContainer;
     private MaterialCardView cartItemsLayout;
     private AppCompatTextView titleText;
@@ -44,7 +43,6 @@ public class CartActivity extends AppCompatActivity implements View.OnClickListe
         backImageButton = findViewById(R.id.back_image_button);
         moreImageButton = findViewById(R.id.more_image_button);
         cartListRecyclerView = findViewById(R.id.cart_list_recycler_view);
-        grandTotalTextView = findViewById(R.id.grand_total_text_view);
         noProductsContainer = findViewById(R.id.no_products_container);
         cartItemsLayout = findViewById(R.id.card_items_layout);
         titleText = findViewById(R.id.title_text);
@@ -90,20 +88,10 @@ public class CartActivity extends AppCompatActivity implements View.OnClickListe
         noProductsContainer.setVisibility(View.GONE);
     }
 
-    public void setGrandTotal(long grandTotal) {
-        grandTotalTextView.setText(String.valueOf(grandTotal));
-    }
-
-    public void updateGrandTotal(long productPrice) {
-        long currentGrandTotal = Long.parseLong(grandTotalTextView.getText().toString());
-        grandTotalTextView.setText(String.valueOf(currentGrandTotal - productPrice));
-    }
-
     public void removeFromCart(ProductsModel productsModel, int position) {
         sqliteHelper.removeProductFromCart(productsModel.getProduct_id());
         cartModelArrayList.remove(position);
         cartListAdapter.notifyItemRemoved(position);
-        updateGrandTotal(productsModel.getProduct_discounted_price());
         checkListEmpty();
         Toast.makeText(this, "Product removed from cart.", Toast.LENGTH_SHORT).show();
     }

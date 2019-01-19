@@ -70,6 +70,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/edit_text_round_bg"
+                android:lines="5"
                 android:maxLines="5"
                 android:inputType="textMultiLine"
                 android:gravity="start"

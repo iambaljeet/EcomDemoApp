@@ -25,6 +25,7 @@ import com.app.ecomdemoapp.fragments.FilterBottomSheetFragment;
 import com.app.ecomdemoapp.models.ProductsModel;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.ListIterator;
 
 
@@ -65,9 +66,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void getFilterProductList(long price) {
-        for (int i = 0; i < productsModelArrayList.size(); i++) {
-            if (productsModelArrayList.get(i).getProduct_discounted_price() > price) {
-                productsModelArrayList.remove(i);
+        for (Iterator<ProductsModel> productsModelIterator = productsModelArrayList.iterator(); productsModelIterator.hasNext();) {
+            if (productsModelIterator.next().getProduct_discounted_price() > price) {
+                productsModelIterator.remove();
             }
         }
         productListAdapter.notifyDataSetChanged();

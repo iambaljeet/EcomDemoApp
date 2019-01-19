@@ -2,6 +2,7 @@ package com.app.ecomdemoapp.adapters;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Paint;
 import android.support.annotation.NonNull;
 import android.support.design.card.MaterialCardView;
 import android.support.v7.widget.AppCompatTextView;
@@ -51,6 +52,8 @@ public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.
         viewHolder.productDescriptionTextView.setText(productsModel.getProduct_description());
         viewHolder.productDiscountedPriceTextView.setText(productsModel.getProduct_currency() + productsModel.getProduct_discounted_price());
         viewHolder.productPriceTextView.setText(productsModel.getProduct_currency() + productsModel.getProduct_price());
+
+        viewHolder.productPriceTextView.setPaintFlags(viewHolder.productPriceTextView.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
 
         viewHolder.productItemContainer.setOnClickListener(new View.OnClickListener() {
             @Override

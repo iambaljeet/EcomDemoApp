@@ -54,6 +54,7 @@ public class AddProductActivity extends AppCompatActivity implements View.OnClic
         titleText.setText(getString(R.string.add_product));
 
         addButton.setOnClickListener(this);
+        backImageButton.setOnClickListener(this);
         sqliteHelper = MyApplication.getSqliteHelper();
     }
 

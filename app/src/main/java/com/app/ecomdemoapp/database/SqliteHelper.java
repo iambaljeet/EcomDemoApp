@@ -130,7 +130,6 @@ public class SqliteHelper extends SQLiteOpenHelper {
         return productsModelArrayList;
     }
 
-
     //Cart
     public long addProductToCart(int product_id) {
         SQLiteDatabase db = this.getWritableDatabase();
